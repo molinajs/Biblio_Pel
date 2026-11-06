@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliopel - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <h1>Bibliopel</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="livros.html" class="nav-item">
+                    <i class="fas fa-book-open"></i>
+                    <span>Livros</span>
+                </a>
+                <a href="emprestimos.html" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Empréstimos</span>
+                </a>
+                <a href="usuarios.html" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Usuários</span>
+                </a>
+                <a href="relatorios.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+                <div class="user-menu">
+                    <a href="emprestimos.html">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">1</span>
+                    </a>
+                    </button>
+                    <div class="user-info">
+                        <span>Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content">
+                <div class="page-header">
+                    <h2>Dashboard</h2>
+                    <p>Visão geral do sistema</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>Total de Livros</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>856</h3>
+                            <p>Disponíveis</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>124</h3>
+                            <p>Empréstimos Ativos</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>342</h3>
+                            <p>Usuários Ativos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Empréstimos Recentes</h3>
+                            <a href="emprestimos.html" class="link">Ver todos</a>
+                        </div>
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Livro</th>
+                                        <th>Usuário</th>
+                                        <th>Data</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>O Senhor dos Anéis</td>
+                                        <td>João Silva</td>
+                                        <td>15/12/2024</td>
+                                        <td><span class="badge-status active">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1984</td>
+                                        <td>Maria Santos</td>
+                                        <td>14/12/2024</td>
+                                        <td><span class="badge-status active">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dom Casmurro</td>
+                                        <td>Pedro Costa</td>
+                                        <td>13/12/2024</td>
+                                        <td><span class="badge-status overdue">Atrasado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>O Pequeno Príncipe</td>
+                                        <td>Ana Lima</td>
+                                        <td>12/12/2024</td>
+                                        <td><span class="badge-status returned">Devolvido</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Livros Mais Emprestados</h3>
+                        </div>
+                        <div class="popular-books">
+                            <div class="popular-book-item">
+                                <div class="rank">1</div>
+                                <div class="book-details">
+                                    <h4>O Senhor dos Anéis</h4>
+                                    <p>J.R.R. Tolkien</p>
+                                </div>
+                                <div class="count">48 vezes</div>
+                            </div>
+                            <div class="popular-book-item">
+                                <div class="rank">2</div>
+                                <div class="book-details">
+                                    <h4>1984</h4>
+                                    <p>George Orwell</p>
+                                </div>
+                                <div class="count">42 vezes</div>
+                            </div>
+                            <div class="popular-book-item">
+                                <div class="rank">3</div>
+                                <div class="book-details">
+                                    <h4>O Pequeno Príncipe</h4>
+                                    <p>Antoine de Saint-Exupéry</p>
+                                </div>
+                                <div class="count">38 vezes</div>
+                            </div>
+                            <div class="popular-book-item">
+                                <div class="rank">4</div>
+                                <div class="book-details">
+                                    <h4>Dom Casmurro</h4>
+                                    <p>Machado de Assis</p>
+                                </div>
+                                <div class="count">35 vezes</div>
+                            </div>
+                            <div class="popular-book-item">
+                                <div class="rank">5</div>
+                                <div class="book-details">
+                                    <h4>Cem Anos de Solidão</h4>
+                                    <p>Gabriel García Márquez</p>
+                                </div>
+                                <div class="count">32 vezes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Adicionando scripts de autenticação -->
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

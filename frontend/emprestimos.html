@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliopel - Empréstimos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script src="buscar_emprestimos.js"></script>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <h1>Bibliopel</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="livros.html" class="nav-item">
+                    <i class="fas fa-book-open"></i>
+                    <span>Livros</span>
+                </a>
+                <a href="emprestimos.html" class="nav-item active">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Empréstimos</span>
+                </a>
+                <a href="usuarios.html" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Usuários</span>
+                </a>
+                <a href="relatorios.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input
+                      type="text"
+                      id="buscarEmprestimo"
+                      placeholder="Pesquisar empréstimos..."
+                    >
+                  </div>
+                <div class="user-menu">
+                    <a href="emprestimos.html">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </a>
+                    </button>
+                    <div class="user-info">
+                        <span>Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Loans Content -->
+            <div class="content">
+                <div class="page-header">
+                    <div>
+                        <h2>Gerenciar Empréstimos</h2>
+                        <p>Controle todos os empréstimos da biblioteca</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openModal('newLoanModal')">
+                        <i class="fas fa-plus"></i>
+                        Novo Empréstimo
+                    </button>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <select class="filter-select">
+                        <option>Todos os Status</option>
+                        <option>Ativo</option>
+                        <option>Atrasado</option>
+                        <option>Devolvido</option>
+                    </select>
+                    <input type="date" class="filter-select">
+                </div>
+
+                <!-- Loans Table -->
+                <div class="card">
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Livro</th>
+                                    <th>Usuário</th>
+                                    <th>Data Empréstimo</th>
+                                    <th>Data Devolução</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#L001</td>
+                                    <td>O Senhor dos Anéis</td>
+                                    <td>João Silva</td>
+                                    <td>01/12/2024</td>
+                                    <td>15/12/2024</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Devolver">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Renovar">
+                                            <i class="fas fa-sync"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#L002</td>
+                                    <td>1984</td>
+                                    <td>Maria Santos</td>
+                                    <td>28/11/2024</td>
+                                    <td>12/12/2024</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Devolver">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Renovar">
+                                            <i class="fas fa-sync"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#L003</td>
+                                    <td>Dom Casmurro</td>
+                                    <td>Pedro Costa</td>
+                                    <td>20/11/2024</td>
+                                    <td>04/12/2024</td>
+                                    <td><span class="badge-status overdue">Atrasado</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Devolver">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                        <button class="btn-icon danger" title="Notificar">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#L004</td>
+                                    <td>O Pequeno Príncipe</td>
+                                    <td>Ana Lima</td>
+                                    <td>15/11/2024</td>
+                                    <td>29/11/2024</td>
+                                    <td><span class="badge-status returned">Devolvido</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Ver Detalhes">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#L005</td>
+                                    <td>Cem Anos de Solidão</td>
+                                    <td>Carlos Mendes</td>
+                                    <td>05/12/2024</td>
+                                    <td>19/12/2024</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Devolver">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Renovar">
+                                            <i class="fas fa-sync"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#L006</td>
+                                    <td>Harry Potter</td>
+                                    <td>Beatriz Alves</td>
+                                    <td>10/11/2024</td>
+                                    <td>24/11/2024</td>
+                                    <td><span class="badge-status returned">Devolvido</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Ver Detalhes">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- New Loan Modal -->
+    <div id="newLoanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Novo Empréstimo</h3>
+                <button class="close-btn" onclick="closeModal('newLoanModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-body">
+                <div class="form-group">
+                    <label>Usuário</label>
+                    <select class="form-input">
+                        <option>Selecione o usuário...</option>
+                        <option>João Silva</option>
+                        <option>Maria Santos</option>
+                        <option>Pedro Costa</option>
+                        <option>Ana Lima</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Livro</label>
+                    <select class="form-input">
+                        <option>Selecione o livro...</option>
+                        <option>O Senhor dos Anéis</option>
+                        <option>O Pequeno Príncipe</option>
+                        <option>Cem Anos de Solidão</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Data de Empréstimo</label>
+                        <input type="date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Data de Devolução</label>
+                        <input type="date" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Observações</label>
+                    <textarea class="form-input" rows="3" placeholder="Observações adicionais (opcional)"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('newLoanModal')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Registrar Empréstimo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

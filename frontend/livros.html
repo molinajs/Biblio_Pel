@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliopel - Gerenciar Livros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script src="buscar_livros.js"></script>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <h1>Bibliopel</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="livros.html" class="nav-item active">
+                    <i class="fas fa-book-open"></i>
+                    <span>Livros</span>
+                </a>
+                <a href="emprestimos.html" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Empréstimos</span>
+                </a>
+                <a href="usuarios.html" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Usuários</span>
+                </a>
+                <a href="relatorios.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input
+                      type="text"
+                      id="buscarLivro"
+                      placeholder="Pesquisar livros..."
+                    >
+                  </div>
+                <div class="user-menu">
+                    <a href="emprestimos.html">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </a>
+                    </button>
+                    <div class="user-info">
+                        <span>Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Books Content -->
+            <div class="content">
+                <div class="page-header">
+                    <div>
+                        <h2>Gerenciar Livros</h2>
+                        <p>Adicione, edite ou remova livros do acervo</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openModal('addBookModal')">
+                        <i class="fas fa-plus"></i>
+                        Adicionar Livro
+                    </button>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <select class="filter-select">
+                        <option>Todas as Categorias</option>
+                        <option>Ficção</option>
+                        <option>Não-Ficção</option>
+                        <option>Romance</option>
+                        <option>Ciência</option>
+                        <option>História</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>Todos os Status</option>
+                        <option>Disponível</option>
+                        <option>Emprestado</option>
+                        <option>Manutenção</option>
+                    </select>
+                </div>
+
+                <!-- Books Table -->
+                <div class="card">
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoria</th>
+                                    <th>ISBN</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td>O Senhor dos Anéis</td>
+                                    <td>J.R.R. Tolkien</td>
+                                    <td>Ficção</td>
+                                    <td>978-0547928227</td>
+                                    <td><span class="badge-status active">Disponível</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Excluir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>1984</td>
+                                    <td>George Orwell</td>
+                                    <td>Ficção</td>
+                                    <td>978-0451524935</td>
+                                    <td><span class="badge-status borrowed">Emprestado</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Excluir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td>O Pequeno Príncipe</td>
+                                    <td>Antoine de Saint-Exupéry</td>
+                                    <td>Ficção</td>
+                                    <td>978-0156012195</td>
+                                    <td><span class="badge-status active">Disponível</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Excluir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#004</td>
+                                    <td>Dom Casmurro</td>
+                                    <td>Machado de Assis</td>
+                                    <td>Romance</td>
+                                    <td>978-8535908671</td>
+                                    <td><span class="badge-status borrowed">Emprestado</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Excluir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#005</td>
+                                    <td>Cem Anos de Solidão</td>
+                                    <td>Gabriel García Márquez</td>
+                                    <td>Ficção</td>
+                                    <td>978-0060883287</td>
+                                    <td><span class="badge-status active">Disponível</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Excluir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#006</td>
+                                    <td>Harry Potter e a Pedra Filosofal</td>
+                                    <td>J.K. Rowling</td>
+                                    <td>Ficção</td>
+                                    <td>978-0439708180</td>
+                                    <td><span class="badge-status active">Disponível</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Excluir">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Book Modal -->
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Novo Livro</h3>
+                <button class="close-btn" onclick="closeModal('addBookModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-body">
+                <div class="form-group">
+                    <label>Título</label>
+                    <input type="text" class="form-input" placeholder="Digite o título do livro">
+                </div>
+                <div class="form-group">
+                    <label>Autor</label>
+                    <input type="text" class="form-input" placeholder="Digite o nome do autor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>ISBN</label>
+                        <input type="text" class="form-input" placeholder="978-0000000000">
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <select class="form-input">
+                            <option>Selecione...</option>
+                            <option>Ficção</option>
+                            <option>Não-Ficção</option>
+                            <option>Romance</option>
+                            <option>Ciência</option>
+                            <option>História</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Editora</label>
+                        <input type="text" class="form-input" placeholder="Nome da editora">
+                    </div>
+                    <div class="form-group">
+                        <label>Ano de Publicação</label>
+                        <input type="number" class="form-input" placeholder="2024">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('addBookModal')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Adicionar Livro</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

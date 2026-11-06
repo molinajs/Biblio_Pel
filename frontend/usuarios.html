@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliopel - Usuários</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script src="buscar_usuario.js"></script>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <h1>Bibliopel</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="livros.html" class="nav-item">
+                    <i class="fas fa-book-open"></i>
+                    <span>Livros</span>
+                </a>
+                <a href="emprestimos.html" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Empréstimos</span>
+                </a>
+                <a href="usuarios.html" class="nav-item active">
+                    <i class="fas fa-users"></i>
+                    <span>Usuários</span>
+                </a>
+                <a href="relatorios.html" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input
+                      type="text"
+                      id="buscarUsuario"
+                      placeholder="Pesquisar usuários..."
+                    >
+                  </div>
+                <div class="user-menu">
+                    <a href="emprestimos.html">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </a>
+                    </button>
+                    <div class="user-info">
+                        <span>Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Users Content -->
+            <div class="content">
+                <div class="page-header">
+                    <div>
+                        <h2>Gerenciar Usuários</h2>
+                        <p>Cadastre e gerencie usuários da biblioteca</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="openModal('addUserModal')">
+                        <i class="fas fa-user-plus"></i>
+                        Adicionar Usuário
+                    </button>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <select class="filter-select">
+                        <option>Todos os Status</option>
+                        <option>Ativo</option>
+                        <option>Inativo</option>
+                        <option>Bloqueado</option>
+                    </select>
+                </div>
+
+                <!-- Users Table -->
+                <div class="card">
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Email</th>
+                                    <th>Telefone</th>
+                                    <th>Empréstimos Ativos</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#U001</td>
+                                    <td>João Silva</td>
+                                    <td>joao.silva@email.com</td>
+                                    <td>(11) 98765-4321</td>
+                                    <td>2</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Histórico">
+                                            <i class="fas fa-history"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#U002</td>
+                                    <td>Maria Santos</td>
+                                    <td>maria.santos@email.com</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>1</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Histórico">
+                                            <i class="fas fa-history"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#U003</td>
+                                    <td>Pedro Costa</td>
+                                    <td>pedro.costa@email.com</td>
+                                    <td>(11) 96543-2109</td>
+                                    <td>1</td>
+                                    <td><span class="badge-status overdue">Pendência</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Histórico">
+                                            <i class="fas fa-history"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#U004</td>
+                                    <td>Ana Lima</td>
+                                    <td>ana.lima@email.com</td>
+                                    <td>(11) 95432-1098</td>
+                                    <td>0</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Histórico">
+                                            <i class="fas fa-history"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#U005</td>
+                                    <td>Carlos Mendes</td>
+                                    <td>carlos.mendes@email.com</td>
+                                    <td>(11) 94321-0987</td>
+                                    <td>1</td>
+                                    <td><span class="badge-status active">Ativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Histórico">
+                                            <i class="fas fa-history"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#U006</td>
+                                    <td>Beatriz Alves</td>
+                                    <td>beatriz.alves@email.com</td>
+                                    <td>(11) 93210-9876</td>
+                                    <td>0</td>
+                                    <td><span class="badge-status inactive">Inativo</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Ver Histórico">
+                                            <i class="fas fa-history"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add User Modal -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Novo Usuário</h3>
+                <button class="close-btn" onclick="closeModal('addUserModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-body">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" class="form-input" placeholder="Digite o nome completo">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-input" placeholder="usuario@email.com">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Telefone</label>
+                        <input type="tel" class="form-input" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input type="text" class="form-input" placeholder="000.000.000-00">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Endereço</label>
+                    <input type="text" class="form-input" placeholder="Rua, número, bairro">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('addUserModal')">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Adicionar Usuário</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

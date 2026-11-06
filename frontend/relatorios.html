@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliopel - Relatórios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <h1>Bibliopel</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="livros.html" class="nav-item">
+                    <i class="fas fa-book-open"></i>
+                    <span>Livros</span>
+                </a>
+                <a href="emprestimos.html" class="nav-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Empréstimos</span>
+                </a>
+                <a href="usuarios.html" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Usuários</span>
+                </a>
+                <a href="relatorios.html" class="nav-item active">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+                <div class="user-menu">
+                    <a href="emprestimos.html">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </a>
+                    </button>
+                    <div class="user-info">
+                        <span>Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Reports Content -->
+            <div class="content">
+                <div class="page-header">
+                    <div>
+                        <h2>Relatórios</h2>
+                        <p>Análise e estatísticas da biblioteca</p>
+                    </div>
+                </div>
+
+                <!-- Report Cards -->
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="report-info">
+                            <h3>Acervo da Biblioteca</h3>
+                            <p>Relatório completo do acervo de livros</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Gerar PDF
+                        </button>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="report-info">
+                            <h3>Histórico de Empréstimos</h3>
+                            <p>Todos os empréstimos realizados</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Gerar PDF
+                        </button>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="report-info">
+                            <h3>Empréstimos Atrasados</h3>
+                            <p>Livros com devolução pendente</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Gerar PDF
+                        </button>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="report-info">
+                            <h3>Usuários Cadastrados</h3>
+                            <p>Lista completa de usuários ativos</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Gerar PDF
+                        </button>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="report-info">
+                            <h3>Livros Mais Emprestados</h3>
+                            <p>Ranking dos livros populares</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Gerar PDF
+                        </button>
+                    </div>
+
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="report-info">
+                            <h3>Estatísticas Mensais</h3>
+                            <p>Resumo mensal de atividades</p>
+                        </div>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Gerar PDF
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>Estatísticas Rápidas</h3>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="quick-stat-item">
+                            <div class="stat-label">Empréstimos Este Mês</div>
+                            <div class="stat-value">87</div>
+                            <div class="stat-change positive">+12% vs mês anterior</div>
+                        </div>
+                        <div class="quick-stat-item">
+                            <div class="stat-label">Taxa de Devolução</div>
+                            <div class="stat-value">94%</div>
+                            <div class="stat-change positive">+3% vs mês anterior</div>
+                        </div>
+                        <div class="quick-stat-item">
+                            <div class="stat-label">Novos Usuários</div>
+                            <div class="stat-value">23</div>
+                            <div class="stat-change positive">+8% vs mês anterior</div>
+                        </div>
+                        <div class="quick-stat-item">
+                            <div class="stat-label">Livros Adicionados</div>
+                            <div class="stat-value">15</div>
+                            <div class="stat-change negative">-5% vs mês anterior</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
