@@ -56,19 +56,19 @@ Este repositório serve como base acadêmica e demonstra conceitos como:
 Algumas capturas de tela para ilustrar as diferentes telas da aplicação:
 
 ### 🔐 Tela de Login
-<img src="assets/login.jpg" alt="Tela de Login" style="max-width: 100%;">[cite: 5]
+<img src="imagens/login.jpg" alt="Tela de Login" style="max-width: 100%;">
 
 ### 📚 Gerenciamento de Livros
-<img src="assets/gernciadordelivros.jpg" alt="Gerenciamento de Livros" style="max-width: 100%;">[cite: 3]
+<img src="imagens/gernciadordelivros.jpg" alt="Gerenciamento de Livros" style="max-width: 100%;">
 
 ### 🔄 Controle de Empréstimos
-<img src="assets/emprestado.jpg" alt="Controle de Empréstimos" style="max-width: 100%;">[cite: 4]
+<img src="imagens/emprestado.jpg" alt="Controle de Empréstimos" style="max-width: 100%;">
 
 ### 👥 Gestão de Usuários
-<img src="assets/gerenciadordeusu.jpg" alt="Gestão de Usuários" style="max-width: 100%;">[cite: 1]
+<img src="imagens/gerenciadordeusu.jpg" alt="Gestão de Usuários" style="max-width: 100%;">
 
 ### 📈 Relatórios
-<img src="assets/relatorios.jpg" alt="Relatórios" style="max-width: 100%;">[cite: 2]
+<img src="imagens/relatorios.jpg" alt="Relatórios" style="max-width: 100%;">
 
 ---
 
