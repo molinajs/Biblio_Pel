@@ -65,7 +65,7 @@ Algumas capturas de tela para ilustrar as diferentes telas da aplicação:
 <img src="imagens/emprestado.jpg" alt="Controle de Empréstimos" style="max-width: 100%;">
 
 ### 👥 Gestão de Usuários
-<img src="imagens/gerenciadordeusu.jpg" alt="Gestão de Usuários" style="max-width: 100%;">
+<img src="imagens/usuarios.jpg" alt="Gestão de Usuários" style="max-width: 100%;">
 
 ### 📈 Relatórios
 <img src="imagens/relatorios.jpg" alt="Relatórios" style="max-width: 100%;">
