@@ -2,8 +2,6 @@
 
 Sistema de gerenciamento de biblioteca desenvolvido para fins acadêmicos e de aprendizado. Construído com HTML5, CSS3, JavaScript puro (ES6+) e LocalStorage.
 
-Acesse o projeto em produção aqui: [Bibliopel](#)
-
 ---
 
 ## Autores
