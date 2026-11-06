@@ -1,6 +1,7 @@
 # 📚 Bibliopel
 
 Sistema de gerenciamento de biblioteca desenvolvido para fins acadêmicos e de aprendizado. Construído com HTML5, CSS3, JavaScript puro (ES6+) e LocalStorage. 
+
 ## Autores: João Molina, Gilberto Xavier, Guilherme Barreto
 
 Acesse o projeto em produção aqui: [Bibliopel](#)
@@ -19,6 +20,25 @@ Este repositório serve como base acadêmica e demonstra conceitos como:
 - Autenticação de usuários e navegação protegida;
 - Persistência de dados locais com LocalStorage API;
 - Organização modular de scripts e folhas de estilo.
+
+---
+
+## 📸 Demonstração do Sistema
+
+### 🔐 Tela de Login
+![Tela de Login](assets/login.jpg)
+
+### 📚 Gerenciamento de Livros
+![Gerenciamento de Livros](assets/gernciadordelivros.jpg)
+
+### 🔄 Controle de Empréstimos
+![Controle de Empréstimos](assets/emprestado.jpg)
+
+### 👥 Gestão de Usuários
+![Gestão de Usuários](assets/gerenciadordeusu.jpg)
+
+### 📈 Relatórios
+![Relatórios](assets/relatorios.jpg)
 
 ---
 
@@ -57,5 +77,3 @@ Bibliopel/
 ├── styles.css        # Estilos globais da aplicação
 ├── script.js         # Lógica dinâmica e manipulação de tela
 └── auth.js           # Controle de sessão e segurança de rotas
-
-
