@@ -1,10 +1,16 @@
 # 📚 Bibliopel
 
-Sistema de gerenciamento de biblioteca desenvolvido para fins acadêmicos e de aprendizado. Construído com HTML5, CSS3, JavaScript puro (ES6+) e LocalStorage. 
-
-## Autores: João Molina, Gilberto Xavier, Guilherme Barreto
+Sistema de gerenciamento de biblioteca desenvolvido para fins acadêmicos e de aprendizado. Construído com HTML5, CSS3, JavaScript puro (ES6+) e LocalStorage.
 
 Acesse o projeto em produção aqui: [Bibliopel](#)
+
+---
+
+## Autores
+
+- João Molina
+- Gilberto Xavier
+- Guilherme Barreto
 
 ---
 
@@ -20,25 +26,6 @@ Este repositório serve como base acadêmica e demonstra conceitos como:
 - Autenticação de usuários e navegação protegida;
 - Persistência de dados locais com LocalStorage API;
 - Organização modular de scripts e folhas de estilo.
-
----
-
-## 📸 Demonstração do Sistema
-
-### 🔐 Tela de Login
-![Tela de Login](assets/login.jpg)
-
-### 📚 Gerenciamento de Livros
-![Gerenciamento de Livros](assets/gernciadordelivros.jpg)
-
-### 🔄 Controle de Empréstimos
-![Controle de Empréstimos](assets/emprestado.jpg)
-
-### 👥 Gestão de Usuários
-![Gestão de Usuários](assets/gerenciadordeusu.jpg)
-
-### 📈 Relatórios
-![Relatórios](assets/relatorios.jpg)
 
 ---
 
@@ -64,16 +51,30 @@ Este repositório serve como base acadêmica e demonstra conceitos como:
 
 ---
 
-## Estrutura do Projeto
+## 📸 Screenshots
 
-```text
-Bibliopel/
-├── login.html        # Página de login e autenticação
-├── index.html        # Dashboard principal do sistema
-├── livros.html       # Módulo de cadastro e consulta de livros
-├── emprestimos.html  # Controle de empréstimos e devoluções
-├── usuarios.html     # Gestão de leitores e permissões
-├── relatorios.html   # Métricas e relatórios gerenciais
-├── styles.css        # Estilos globais da aplicação
-├── script.js         # Lógica dinâmica e manipulação de tela
-└── auth.js           # Controle de sessão e segurança de rotas
+Algumas capturas de tela para ilustrar as diferentes telas da aplicação:
+
+### 🔐 Tela de Login
+<img src="assets/login.jpg" alt="Tela de Login" style="max-width: 100%;">[cite: 5]
+
+### 📚 Gerenciamento de Livros
+<img src="assets/gernciadordelivros.jpg" alt="Gerenciamento de Livros" style="max-width: 100%;">[cite: 3]
+
+### 🔄 Controle de Empréstimos
+<img src="assets/emprestado.jpg" alt="Controle de Empréstimos" style="max-width: 100%;">[cite: 4]
+
+### 👥 Gestão de Usuários
+<img src="assets/gerenciadordeusu.jpg" alt="Gestão de Usuários" style="max-width: 100%;">[cite: 1]
+
+### 📈 Relatórios
+<img src="assets/relatorios.jpg" alt="Relatórios" style="max-width: 100%;">[cite: 2]
+
+---
+
+## 🚀 Melhorias e Próximos Passos
+
+- Integração com backend (Node.js/Express) e banco de dados relacional;
+- Exportação de relatórios em formato PDF;
+- Filtro avançado e ordenação por categoria, autor e status do livro;
+- Notificações de devoluções atrasadas diretamente na interface.
